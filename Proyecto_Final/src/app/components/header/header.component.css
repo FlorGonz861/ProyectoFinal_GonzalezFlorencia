@@ -1,9 +1,8 @@
 div{
     background-color: #BD8AE4;
-    width: 100%;
+    width: auto;
 }
 
-app-social{
-    float: right;
-    margin-top: 25px;
+app-banner{
+    padding: 0;
 }
