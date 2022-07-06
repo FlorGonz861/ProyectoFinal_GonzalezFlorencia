@@ -4,14 +4,15 @@
             <img src="../../../assets/APLogo.png" alt="logo" id="logo-ap">
         </div>
         <div class="redes">
-            <a href=""><img src="../../../assets/linkedin.png" alt="linkedin-logo" id="linkedin"></a>
+            <a href="https://www.linkedin.com/in/florencia-elizabeth-gonz%C3%A1lez-31b39621b/"><img src="../../../assets/linkedin.png" alt="linkedin-logo" id="linkedin"></a>
             <a href=""><img src="../../../assets/twitter.png" alt="twitter-logo" id="twitter"></a>
-            <a href=""><img src="../../../assets/instagram.png" alt="instagram-logo" id="instagram"></a>
-            <a href=""><img src="../../../assets/github.png" alt="github-logo" id="github"></a>
-            <a href=""><img src="../../../assets/facebook.png" alt="facebook-logo" id="facebook"></a>
+            <a href="https://www.instagram.com/florencia.861g/"><img src="../../../assets/instagram.png" alt="instagram-logo" id="instagram"></a>
+            <a href="https://github.com/FlorGonz861"><img src="../../../assets/github.png" alt="github-logo" id="github"></a>
+            <a href="https://www.facebook.com/florencia.gonzalez.39"><img src="../../../assets/facebook.png" alt="facebook-logo" id="facebook"></a>
         </div>
         <div>
-            <button type="button" class="btn btn-outline-light" (click)="login()">Login</button>
+            <button type="button" class="btn btn-outline-light" (click)="login()" *ngIf="!isLogged">Ingresar</button>
+            <button type="button" class="btn btn-outline-light" (click)="onLogOut()" *ngIf="isLogged">Cerrar Sesión</button>
         </div>
     </div>
 </div>
