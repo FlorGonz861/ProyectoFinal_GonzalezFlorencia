@@ -10,16 +10,16 @@
           <form #f="ngForm" (ngSubmit)="onLogin()" novalidate>
 
             <div class="form-outline mb-4">
-              <input type="email" id="nombreUsuario" name="nombreUsuario" class="form-control" [(ngModel)]="nombreUsuario" required>
+              <input type="email" id="nombreUsuario" name="nombreUsuario" class="form-control form-control-lg" [(ngModel)]="nombreUsuario" [ngModelOptions]="{standalone: true}" required>
               <label class="form-label" for="nombreUsuario">Usuario</label>
             </div>
 
             <div class="form-outline mb-4">
-              <input type="password" id="password" class="form-control" [(ngModel)]="password" required/>
+              <input type="password" id="password" class="form-control form-control-lg" [(ngModel)]="password" [ngModelOptions]="{standalone: true}" required/>
               <label class="form-label" for="password">Contraseña</label>
             </div>
 
-            <button type="button" class="btn btn-success btn-lg btn-block">Ingresar</button>
+            <button type="submit" class="btn btn-success btn-lg btn-block">Ingresar</button>
 
           </form>
 
