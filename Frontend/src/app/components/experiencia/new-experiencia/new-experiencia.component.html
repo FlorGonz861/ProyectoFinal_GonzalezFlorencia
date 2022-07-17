@@ -1,17 +1,24 @@
-<div class="container">
-  <div class="row">
-    <div>
-      <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
-        <div class="form-group">
-          <label for="nombreE">Nombre de la empresa</label>
-          <input type="text" class="form-control" id="nombreE" name="nombreE" [(ngModel)]="nombreE" required>
-        </div>
-        <div class="form-group">
-          <label for="descripcioneE">Descripcion de la tarea</label>
-          <input type="text" class="form-control" id="descripcionE" name="descripcionE" [(ngModel)]="descripcionE" required>
-        </div>
-        <button class="btn btn-primary">Agregar Experiencia</button>
-      </form>
+<div class="p-5">
+  <div class="card w-80 px-5 tarjeta">
+    <div class="row g-0 d-flex align-items-center">
+      <div class="card-body py-5 px-md-5">
+
+        <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+
+          <div class="form-group p-2">
+            <label for="nombreE" class="p-2 fw-bold fs-5">Nombre de la empresa</label>
+            <input type="text" class="form-control" id="nombreE" name="nombreE" [(ngModel)]="nombreE" required>
+          </div>
+
+          <div class="form-group p-2">
+            <label for="descripcioneE" class="p-2 fw-bold fs-5">Descripcion de la tarea</label>
+            <input type="text" class="form-control" id="descripcionE" name="descripcionE" [(ngModel)]="descripcionE" required>
+          </div>
+
+          <button class="btn btn-success py-2 mt-2">Agregar Experiencia</button>
+
+        </form>
+      </div>
     </div>
   </div>
 </div>
