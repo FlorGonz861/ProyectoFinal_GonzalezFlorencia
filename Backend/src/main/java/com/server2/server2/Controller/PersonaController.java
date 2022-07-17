@@ -19,33 +19,33 @@ import org.springframework.web.bind.annotation.RestController;
 public class PersonaController {
     @Autowired IPersonaService ipersonaService;
     
-    @GetMapping("proyectodb/Persona/traer")
+    @GetMapping("/Persona/traer")
     public List<Persona> getPersona(){
         return ipersonaService.getPersona();
     }
     
-    @PostMapping("/proyectodb/Persona/crear")
+    @PostMapping("/Persona/crear")
     public String createPersona(@RequestBody Persona persona){
         ipersonaService.savePersona(persona);
         return "Persona creada";
     }
     
-    @DeleteMapping("/proyectodb/Persona/borrar/{id}")
+    @DeleteMapping("/Persona/borrar/{id}")
     public String deletePersona(@PathVariable Long id){
         ipersonaService.deletePersona(id);
         return "Persona eliminada";
     }
     
-    @PutMapping("/proyectodb/Persona/editar/{id}")
+    @PutMapping("/Persona/editar/{id}")
     public Persona editPersona(@PathVariable Long id,
                                @RequestParam("nombre") String nuevoNombre,
                                @RequestParam("apellido") String nuevoApellido,
-                               @RequestParam("img_perfil") String nuevoImg_perfil){
+                               @RequestParam("img") String nuevoImg){
         Persona persona = ipersonaService.findPersona(id);
         
         persona.setNombre(nuevoNombre);
         persona.setApellido(nuevoApellido);
-        persona.setImg_perfil(nuevoImg_perfil);
+        persona.setImg(nuevoImg);
         
         ipersonaService.savePersona(persona);
         return persona;

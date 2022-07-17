@@ -15,7 +15,7 @@ export class SExperienciaService {
     return this.httpClient.get<Experiencia[]>(this.expURL + 'lista');
   }
 
-  public datail(id:number): Observable<Experiencia[]>{
+  public detail(id:number): Observable<Experiencia[]>{
     return this.httpClient.get<Experiencia[]>(this.expURL + `detail/${id}`);
   }
 
