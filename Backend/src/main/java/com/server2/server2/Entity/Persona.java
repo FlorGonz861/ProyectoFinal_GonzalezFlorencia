@@ -6,31 +6,40 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
 
 @Entity
 public class Persona {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    
-    @NotNull
-    @Size(min = 1, max = 50, message = "no cumple con la longitud")
+    private int id;
     private String nombre;
-    
-    @NotNull
-    @Size(min = 1, max = 50, message = "no cumple con la longitud")
     private String apellido;
-    
-    @Size(min = 1, max = 50, message = "no cumple con la longitud")
+    private String bio;
     private String img;
 
-    public Long getId() {
+    public Persona() {
+    }
+
+    public Persona(String nombre, String apellido, String bio, String img) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.bio = bio;
+        this.img = img;
+    }
+
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
+    }
+
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -50,13 +59,14 @@ public class Persona {
         this.apellido = apellido;
     }
 
-    public String getImg() {
-        return img;
+    public String getBio() {
+        return bio;
     }
 
-    public void setImg(String img) {
-        this.img = img;
+    public void setBio(String bio) {
+        this.bio = bio;
     }
+
     
     
     
