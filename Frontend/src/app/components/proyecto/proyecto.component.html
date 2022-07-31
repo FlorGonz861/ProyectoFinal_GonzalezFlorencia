@@ -1,14 +1,33 @@
 <div class="row">
-    <h1>Proyectos Realizados</h1>
-    <div class="container">
-        <div class="parte1">
-            <h3>Encriptador</h3>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. At iusto recusandae eaque exercitationem dolorem a beatae ipsam aliquam facilis minima iure sed laborum, ipsum, magnam quibusdam? Corrupti culpa perferendis doloribus. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia illo quod eveniet ut tempora exercitationem alias quidem repellendus eaque sed ullam, explicabo quas nam porro et molestias rem. Maxime, expedita!</p>
-        </div>
-        <div class="parte2">
-            <a href="https://florgonz861.github.io/Encriptador---Challenge-1-/">
-                <img src="../../../assets/encriptador.jpg" alt="" class="img-fluid img-proyecto">
-            </a>
-        </div>
-    </div>
+  <h1 class="titulo fw-bold">Proyectos Realizados</h1>
+
+  <div class="col-lg-6 col-md-6 col-sm-6 d-flex justify-content-end">
+    <button type="button" class="btn btn-outline-dark fw-bolder mb-2 agregar" routerLink="/nuevaproy" *ngIf="isLogged">Agregar Proyecto</button>
+  </div>
+
+  <div class="table-responsive-sm">
+    <table class="table table-borderless">
+      <tbody>
+        <tr *ngFor="let Proyecto of proy">
+          <div class="parte1">
+            <td class="col-xl-6 col-lg-4 col-md-3 col-sm-12"><img src="../../../assets/icon.png"><h2 class="fw-bold">{{Proyecto.titulo}}</h2></td>
+            <td class="col-xl-6 col-lg-4 col-md-4 col-sm-12">{{Proyecto.resumen}}</td>
+          </div>
+          <div>
+            <td class="col-xl-6 col-lg-4 col-md-4 col-sm-12 parte2">
+              <a href={{Proyecto.enlace}}><img [src]="Proyecto.imagen" class="img-fluid img-proyecto w-100"></a>
+            </td>
+          </div>
+
+          <td class="col-xl-2 col-lg-1 col-md-1 col-sm-6" *ngIf="isLogged">
+            <button class="btn btn-outline-dark fw-bolder edita" routerLink="/editproy/{{Proyecto.id}}">Editar<img src="../../../assets/editar.png" class="w-25"/></button>
+          </td>
+
+          <td class="col-lg-2 col-md-1 col-sm-6" *ngIf="isLogged">
+            <button class="btn btn-outline-dark fw-bolder borra" (click)="delete(Proyecto.id)">Borrar<img src="../../../assets/borrar.png" class="w-25"/></button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>

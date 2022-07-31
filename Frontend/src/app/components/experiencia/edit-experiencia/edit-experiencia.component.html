@@ -1,0 +1,30 @@
+<div class="p-5">
+  <div class="card w-80 px-5 tarjeta">
+    <div class="row g-0 d-flex align-items-center">
+      <div class="col-lg-4 col- d-none d-lg-flex">
+        <img src="../../../../assets/edicion-guardar.jpg" alt="imagen-login" class="w-100 p-3 rounded-pill"/>
+      </div>
+      <div class="col-lg-8">
+        <div class="card-body py-5 px-md-5">
+
+          <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+
+            <div class="form-outline mb-4">
+              <label for="nombreE" class="text-light">Título del cargo</label>
+              <input type="text" class="form-control" id="nombreE" name="nombreE" [(ngModel)]="expLab.nombreE" required>
+            </div>
+
+            <div class="form-outline mb-4">
+              <label for="descripcionE" class="text-light">Descripcion de la tarea</label>
+              <input type="text" class="form-control" id="descripcionE" name="descripcionE" [(ngModel)]="expLab.descripcionE" required>
+            </div>
+
+            <button type="submit" class="btn btn-light btn-lg btn-block">Guardar</button>
+
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

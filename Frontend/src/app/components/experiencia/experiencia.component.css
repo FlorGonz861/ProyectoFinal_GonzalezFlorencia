@@ -1,13 +1,37 @@
-.row{
-    padding: 20px;
-}
-
 div{
-    background: 	#dac9df;
+    background: 	#eedfef;
+}
+.titulo{
+  color: #352a55;
+  font-style: solid ;
 }
 
-h2,h3{
-    display: inline;
+.agregar{
+  color:#bd83b4;
+  border-color: #bd83b4;
+  border-width: 2px;
+}
+
+img{
+  width: 25px;
+  padding-bottom: 10px;
+}
+img, h2{
+  display: inline-block;
+}
+
+.borra{
+  color:#bf4158;
+  border-color: #bf4158;
+  border-width: 2px;
+}
+
+
+
+.edita{
+  color: #6b5b94;
+  border-color: #6b5b94;
+  border-width: 2px;
 }
 
 

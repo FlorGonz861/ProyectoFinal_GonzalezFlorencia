@@ -1,22 +1,41 @@
 .row{
-    padding: 20px;
-    background-color: 	#dac9df
-    ;
-}
-.container{
-    width: auto;
-    display:flex;
-    align-items: flex-start;
-    justify-content: space-between;
-}
-.img-proyecto{
-    box-shadow: 10px 10px 30px #000;
+  background-color: 	#eedfef;
 }
 
-/* Vista Celular*/
-@media (max-width:575.98px){
-    .container{
-        display:flex;
-        flex-direction: column;
-    }
+.parte1, .parte2{
+  display: flex;
+  flex-direction: column;
+}
+
+.titulo{
+  color: #352a55;
+  font-style: solid ;
+}
+
+.agregar{
+  color:#bd83b4;
+  border-color: #bd83b4;
+  border-width: 2px;
+}
+
+img{
+  width: 25px;
+  padding-bottom: 10px;
+}
+img, h2{
+  display: inline-block;
+}
+
+.borra{
+  color:#bf4158;
+  border-color: #bf4158;
+  border-width: 2px;
+}
+
+
+
+.edita{
+  color: #6b5b94;
+  border-color: #6b5b94;
+  border-width: 2px;
 }
