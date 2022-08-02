@@ -1,10 +1,16 @@
 .row{
-    padding: 10px;
+  padding: 10px;
 }
 
 div{
-    background-color: #eedfef;
-    text-align: center;
+  background-color: #eedfef;
+  text-align: center;
+}
+
+.edita{
+  color: #6b5b94;
+  border-color: #6b5b94;
+  border-width: 2px;
 }
 
 /*Estilo Foto de perfil*/
@@ -15,7 +21,6 @@ div{
         border-radius: 100%;
         box-shadow: 3px 3px 3px grey;
         left: 10%;
-        top: 70%;
     }
 }
 

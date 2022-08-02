@@ -11,7 +11,6 @@ import { TokenService } from 'src/app/service/token.service';
 export class AcercaDeComponent implements OnInit {
   per: persona[] = [];
 
-
   constructor(private sPersona: PersonaService, private tokenService: TokenService) { }
 
 
@@ -27,19 +26,10 @@ export class AcercaDeComponent implements OnInit {
   }
 
   cargarPersona(): void {
-    this.sPersona.lista().subscribe(data => { this.per = data; })
+    this.sPersona.lista().subscribe(data => { this.per = data; }, err => {
+      alert("No se pudo borrar la persona");
+    })
   }
 
-  delete(id?: number){
-    if(id != undefined){
-      this.sPersona.delete(id).subscribe(
-        data => {
-          this.cargarPersona();
-        }, err => {
-          alert("No se pudo borrar la persona");
-        }
-      )
-    }
-  }
 
 }

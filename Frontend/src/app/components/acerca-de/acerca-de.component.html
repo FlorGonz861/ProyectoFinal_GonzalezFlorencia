@@ -1,21 +1,20 @@
 <div class="row">
     <div class="col d-flex flex-column">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 fotoperfil">
-            <img src="../../../assets/FotoPerfil.jpeg" alt="FotoPerfil" class="img-fluid" id="fotodeperfil">
-            <!--<a type="button" *ngIf="isLogged"><img src="../../../assets/editar.png" class="editor"></a>-->
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 fotoperfil mb-3">
+            <img src="../../../assets/FotoPerfil.jpeg" alt="FotoPerfil" class="img-fluid " id="fotodeperfil">
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 nombre">
-            <!--<h3 id="nombre">{{persona.nombre}}{{persona.apellido}}</h3>-->
-            <h3>Florencia Gonzalez</h3>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 nombre mt-5" *ngFor="let Persona of per">
+            <h3 id="nombre">{{Persona.nombre}} {{Persona.apellido}}</h3>
             <h5 class="font-monospace">Full Stack Developer Junior</h5>
-            <h6>gonzalez.florencia.861@hotmail.com</h6>
         </div>
     </div>
-    <div class="col col-xs-12 col-sm-8 col-md-8 col-lg-8">
+    <div class="col col-xs-12 col-sm-8 col-md-8 col-lg-8 d-flex flex-column justify-content-center align-content-center" *ngFor="let Persona of per">
         <span>
             <h1>Acerca de mí</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non debitis cum magni aliquid asperiores numquam ducimus facere vitae vel hic fugiat culpa tempora, quas nostrum optio odio fuga provident eius. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis, molestiae ducimus. Quasi iure eos repellendus iusto autem! Soluta culpa enim earum, deleniti deserunt repudiandae natus quas fugit odio accusamus corrupti? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita, corrupti. Quidem corrupti provident ea magni, unde debitis error harum quibusdam enim et necessitatibus dignissimos ex fuga labore atque ipsa vitae?
-            </p>
+            <p>{{Persona.bio}}</p>
         </span>
+        <div class="col-lg-12 col-md-1 col-sm-6 " *ngIf="isLogged">
+          <button class="btn btn-outline-dark fw-bold edita w-25 fs-5 " routerLink="/editace/{{Persona.id}}">Editar<img src="../../../assets/editar.png" class="w-25 px-2"/></button>
+        </div>
     </div>
 </div>
