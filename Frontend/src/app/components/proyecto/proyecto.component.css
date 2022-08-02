@@ -13,12 +13,12 @@
   border-width: 2px;
 }
 
-img{
+.icono{
   width: 25px;
   padding-bottom: 10px;
 }
 
-img, h2{
+.icono, h2{
   display: inline-block;
 }
 
@@ -28,10 +28,15 @@ img, h2{
   border-width: 2px;
 }
 
-
-
 .edita{
   color: #6b5b94;
   border-color: #6b5b94;
   border-width: 2px;
+}
+
+@media (max-width: 767.98px){
+  .caja{
+    display:flex;
+    flex-direction: column;
+  }
 }

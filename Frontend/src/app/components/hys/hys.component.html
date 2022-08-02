@@ -24,10 +24,10 @@
         ></circle-progress>
       </div>
 
-      <div class="col-xl-9 col-lg-6 col-md-1 col-sm-6 d-flex align-items-center ms-5" *ngIf="isLogged">
-        <button class="btn btn-outline-dark fw-bolder edita mx-2" routerLink="/edithab/{{Habilidades.id}}">Editar<img src="../../../assets/editar.png" class="w-25"/></button>
+      <div class="col-lg-12 col-md-12 col-sm-12 d-flex justify-content-center mb-4" *ngIf="isLogged">
+        <button class="col-lg-5 col-md-4 col-sm-2 btn btn-outline-dark fw-bolder edita mx-2" routerLink="/edithab/{{Habilidades.id}}">Editar<img src="../../../assets/editar.png" class="w-25"/></button>
 
-        <button class="btn btn-outline-dark fw-bolder borra mx-2" (click)="delete(Habilidades.id)">Borrar<img src="../../../assets/borrar.png" class="w-25"/></button>
+        <button class="col-lg-5 col-md-4 col-sm-2 btn btn-outline-dark fw-bolder borra mx-2" (click)="delete(Habilidades.id)">Borrar<img src="../../../assets/borrar.png" class="w-25"/></button>
       </div>
     </div>
 </div>

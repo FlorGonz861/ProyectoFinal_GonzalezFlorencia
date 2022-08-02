@@ -27,11 +27,30 @@ img, h2{
   border-width: 2px;
 }
 
-
-
 .edita{
   color: #6b5b94;
   border-color: #6b5b94;
   border-width: 2px;
 }
 
+@media (min-width: 767.98px) {
+  .imagen{
+    width:25%
+  }
+}
+
+@media (max-width: 767.98px) {
+  .parte1{
+    display:inline-block;
+  }
+  td{
+    display: flex;
+    flex-direction: column;
+  }
+  .borra, .edita{
+    width: 100%;
+  }
+  .imagen{
+    width: 20px;
+  }
+}

@@ -1,6 +1,6 @@
 <div class="row">
   <h1 class="titulo fw-bold">Estudios Cursados</h1>
-  <div class="col-lg-6 col-md-6 col-sm-6 d-flex justify-content-end">
+  <div class="col-lg-12 col-md-12 col-sm-12 d-flex justify-content-center">
     <button type="button" class="btn btn-outline-dark fw-bold mb-2 agregar" routerLink="/nuevaedu" *ngIf="isLogged">Agregar Educación</button>
   </div>
     <div class="table-responsive-sm">
@@ -8,15 +8,19 @@
         <tbody class="px-0">
           <tr *ngFor="let Educacion of edu">
 
-            <td class="col-lg-3 col-md-3 col-sm-12"><img src="../../../assets/icon.png"><h2 class="fw-bold"> {{Educacion.tituloEd}} - {{Educacion.tiempoEd}}</h2></td>
-            <td class="col-lg-4 col-md-4 col-sm-12">{{Educacion.descripcionEd}}</td>
-
-            <td class="col-lg-1 col-md-1 col-sm-6" *ngIf="isLogged">
-              <button class="btn btn-outline-dark fw-bold edita" routerLink="/editedu/{{Educacion.id}}">Editar <img src="../../../assets/editar.png" class="w-25"/></button>
+            <td class="col-lg-3 col-md-3 col-sm-12 parte1">
+              <img src="../../../assets/icon.png">
+              <h2 class="fw-bold"> {{Educacion.tituloEd}} - {{Educacion.tiempoEd}}</h2>
             </td>
 
-            <td class="col-lg-1 col-md-1 col-sm-6" *ngIf="isLogged">
-              <button class="btn btn-outline-dark fw-bold borra" (click)="delete(Educacion.id)">Borrar <img src="../../../assets/borrar.png" class="w-25"/></button>
+            <td class="col-lg-4 col-md-4 col-sm-12">{{Educacion.descripcionEd}}</td>
+
+            <td class="col-lg-1 col-md-1 col-sm-12" *ngIf="isLogged">
+              <button class="btn btn-outline-dark fw-bold edita" routerLink="/editedu/{{Educacion.id}}">Editar <img src="../../../assets/editar.png" class="imagen"/></button>
+            </td>
+
+            <td class="col-lg-1 col-md-1 col-sm-12" *ngIf="isLogged">
+              <button class="btn btn-outline-dark fw-bold borra" (click)="delete(Educacion.id)">Borrar <img src="../../../assets/borrar.png" class="imagen"/></button>
             </td>
 
           </tr>

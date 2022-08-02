@@ -1,20 +1,20 @@
 <div class="row">
-    <div class="col d-flex flex-column">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 fotoperfil mb-3">
+    <div class="col-lg-4 col-md-4 col-sm-12 d-flex flex-column">
+        <div class="col-lg-12 col-md-12 col-sm-12 fotoperfil mb-lg-5 mb-md-5">
             <img src="../../../assets/FotoPerfil.jpeg" alt="FotoPerfil" class="img-fluid " id="fotodeperfil">
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 nombre mt-5" *ngFor="let Persona of per">
+        <div class="col-lg-12 col-md-12 col-sm-12 nombre mt-lg-5 mt-md-5" *ngFor="let Persona of per">
             <h3 id="nombre">{{Persona.nombre}} {{Persona.apellido}}</h3>
             <h5 class="font-monospace">Full Stack Developer Junior</h5>
         </div>
     </div>
-    <div class="col col-xs-12 col-sm-8 col-md-8 col-lg-8 d-flex flex-column justify-content-center align-content-center" *ngFor="let Persona of per">
+    <div class="col-lg-8 col-md-8 col-sm-12 d-flex flex-column justify-content-center align-content-center" *ngFor="let Persona of per">
         <span>
-            <h1>Acerca de mí</h1>
+            <h1 class="titulo fw-bold">Acerca de mí</h1>
             <p>{{Persona.bio}}</p>
         </span>
-        <div class="col-lg-12 col-md-1 col-sm-6 " *ngIf="isLogged">
-          <button class="btn btn-outline-dark fw-bold edita w-25 fs-5 " routerLink="/editace/{{Persona.id}}">Editar<img src="../../../assets/editar.png" class="w-25 px-2"/></button>
+        <div class="col-lg-12 col-md-12 col-sm-12 " *ngIf="isLogged">
+          <button class="btn btn-outline-dark fw-bold edita fs-5 " routerLink="/editace/{{Persona.id}}">Editar<img src="../../../assets/editar.png" class="w-25 px-2"/></button>
         </div>
     </div>
 </div>

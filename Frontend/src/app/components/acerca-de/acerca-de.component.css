@@ -14,7 +14,7 @@ div{
 }
 
 /*Estilo Foto de perfil*/
-@media (min-width: 576px){
+@media (min-width: 768px){
     #fotodeperfil{
         position:absolute;
         width: 15%;
@@ -22,20 +22,29 @@ div{
         box-shadow: 3px 3px 3px grey;
         left: 10%;
     }
+    button{
+      width: 25%;
+    }
+}
+.titulo{
+  color: #352a55;
+  font-style: solid ;
 }
 
-
-@media (max-width: 575.98px){
+@media (max-width: 767.98px){
     #fotodeperfil{
-        position:absolute;
-        width: 30%;
-        border-radius: 100%;
-        box-shadow: 3px 3px 3px grey;
-        left: 35%;
+      position:absolute;
+      width: 30%;
+      border-radius: 100%;
+      box-shadow: 3px 3px 3px grey;
+      left: 35%;
     }
     .row{
-        display: flex;
-        flex-direction: column;
+      display: flex;
+      flex-direction: column;
+    }
+    button{
+      width: 45%;
     }
 }
 
