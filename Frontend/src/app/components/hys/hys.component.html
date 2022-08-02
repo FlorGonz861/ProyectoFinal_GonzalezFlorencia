@@ -1,112 +1,33 @@
 <div class="row">
-    <h1>Hard & Soft skills</h1>
-    <div class="text-center col-sm-6 col-md-4 col-lg-4">
-        <circle-progress
-            [percent]="95"
-            [radius]="100"
-            [showUnits]="false"
-            [title]="'<HTML/>'"
-            [titleColor]="'#4A235A'"
-            [titleFontSize]="'2em'"
-            [titleFontWeight]="'700'"
-            [showSubtitle]="false"
-            [outerStrokeWidth]="12"
-            [innerStrokeWidth]="100"
-            [outerStrokeColor]="'#9265a5'"
-            [innerStrokeColor]="'#efbe80'"
-            [animation]="true"
-            [animationDuration]="600"
-        ></circle-progress>
-    </div>
-    <div class="text-center col-sm-6 col-md-4 col-lg-4">
-        <circle-progress
-            [percent]="95"
-            [radius]="100"
-            [showUnits]="false"
-            [title]="'{ CSS }'"
-            [titleColor]="'#4A235A'"
-            [titleFontSize]="'2em'"
-            [titleFontWeight]="'700'"
-            [showSubtitle]="false"
-            [outerStrokeWidth]="12"
-            [innerStrokeWidth]="100"
-            [outerStrokeColor]="'#9265a5'"
-            [innerStrokeColor]="'#efbe80'"
-            [animation]="true"
-            [animationDuration]="600"
-        ></circle-progress>
-    </div>
-    <div class="text-center col-sm-6 col-md-4 col-lg-4">
-        <circle-progress
-            [percent]="70"
-            [radius]="100"
-            [showUnits]="false"
-            [title]="'Javascript'"
-            [titleColor]="'#4A235A'"
-            [titleFontSize]="'2em'"
-            [titleFontWeight]="'700'"
-            [showSubtitle]="false"
-            [outerStrokeWidth]="12"
-            [innerStrokeWidth]="100"
-            [outerStrokeColor]="'#9265a5'"
-            [innerStrokeColor]="'#efbe80'"
-            [animation]="true"
-            [animationDuration]="600"
-        ></circle-progress>
-    </div>
-    <div class="text-center col-sm-6 col-md-4 col-lg-4">
-        <circle-progress
-            [percent]="75"
-            [radius]="100"
-            [showUnits]="false"
-            [title]="'AngularJS'"
-            [titleColor]="'#4A235A'"
-            [titleFontSize]="'2em'"
-            [titleFontWeight]="'700'"
-            [showSubtitle]="false"
-            [outerStrokeWidth]="12"
-            [innerStrokeWidth]="100"
-            [outerStrokeColor]="'#9265a5'"
-            [innerStrokeColor]="'#efbe80'"
-            [animation]="true"
-            [animationDuration]="600"
-        ></circle-progress>
-    </div>
-    <div class="text-center col-sm-6 col-md-4 col-lg-4">
-        <circle-progress
-            [percent]="70"
-            [radius]="100"
-            [showUnits]="false"
-            [title]="'Java'"
-            [titleColor]="'#4A235A'"
-            [titleFontSize]="'2em'"
-            [titleFontWeight]="'700'"
-            [showSubtitle]="false"
-            [outerStrokeWidth]="12"
-            [innerStrokeWidth]="100"
-            [outerStrokeColor]="'#9265a5'"
-            [innerStrokeColor]="'#efbe80'"
-            [animation]="true"
-            [animationDuration]="600"
-        ></circle-progress>
-    </div>
-    <div class="text-center col-sm-6 col-md-4 col-lg-4">
-        <circle-progress
-            [percent]="85"
-            [radius]="100"
-            [showUnits]="false"
-            [title]="'MySQL'"
-            [titleColor]="'#4A235A'"
-            [titleFontSize]="'2em'"
-            [titleFontWeight]="'700'"
-            [showSubtitle]="false"
-            [outerStrokeWidth]="12"
-            [innerStrokeWidth]="100"
-            [outerStrokeColor]="'#9265a5'"
-            [innerStrokeColor]="'#efbe80'"
-            [animation]="true"
-            [animationDuration]="600"
-        ></circle-progress>
-    </div>
+    <h1 class="titulo fw-bold">Hard & Soft skills</h1>
 
+    <div class="col-lg-12 col-md-12 col-sm-12 d-flex justify-content-center">
+      <button type="button" class="btn btn-outline-dark fw-bold mb-2 agregar" routerLink="/nuevahab" *ngIf="isLogged">Agregar Hard & Soft skills</button>
+    </div>
+    <div *ngFor="let Habilidades of hab" class="text-center col-sm- col-md-4 col-lg-4 mt-3d-flex flex-column">
+      <div >
+        <circle-progress
+            [percent]="Habilidades.nivel"
+            [radius]="100"
+            [showUnits]="false"
+            [title]="Habilidades.nombre"
+            [titleColor]="'#4A235A'"
+            [titleFontSize]="'2em'"
+            [titleFontWeight]="'700'"
+            [showSubtitle]="false"
+            [outerStrokeWidth]="12"
+            [innerStrokeWidth]="100"
+            [outerStrokeColor]="'#9265a5'"
+            [innerStrokeColor]="'#efbe80'"
+            [animation]="true"
+            [animationDuration]="600"
+        ></circle-progress>
+      </div>
+
+      <div class="col-xl-9 col-lg-6 col-md-1 col-sm-6 d-flex align-items-center ms-5" *ngIf="isLogged">
+        <button class="btn btn-outline-dark fw-bolder edita mx-2" routerLink="/edithab/{{Habilidades.id}}">Editar<img src="../../../assets/editar.png" class="w-25"/></button>
+
+        <button class="btn btn-outline-dark fw-bolder borra mx-2" (click)="delete(Habilidades.id)">Borrar<img src="../../../assets/borrar.png" class="w-25"/></button>
+      </div>
+    </div>
 </div>

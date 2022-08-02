@@ -1,1 +1,27 @@
-<p>newhys works!</p>
+<div class="p-5">
+  <div class="card w-80 px-5 tarjeta">
+    <div class="row g-0 d-flex align-items-center">
+      <div class="col-lg-4 col- d-none d-lg-flex">
+        <img src="../../../../assets/edicion-guardar.jpg" alt="imagen-login" class="w-100 p-3 rounded-pill"/>
+      </div>
+      <div class="col-lg-8">
+        <div class="card-body py-5 px-md-5">
+            <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+
+                <div class="form-outline mb-4">
+                    <label for="nombre" class="text-light" >Nombre de Habilidad</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="nombre" required>
+                </div>
+
+                <div class="form-outline mb-4">
+                    <label for="nivel"  class="text-light">Nivel de la habilidad</label>
+                    <input type="text" class="form-control" id="nivel" name="nivel" [(ngModel)]="nivel" required>
+                </div>
+
+                <button type="submit" class="btn btn-light btn-lg btn-block">Agregar Habilidad</button>
+            </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

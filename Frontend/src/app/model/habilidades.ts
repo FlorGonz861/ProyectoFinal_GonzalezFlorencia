@@ -1,12 +1,10 @@
 export class Habilidades {
     id? : number;
     nombre : string;
-    nivel : string;
-    imagen : string;
+    nivel : number;
 
-    constructor(nombre: string, nivel: string, imagen: string){
+    constructor(nombre: string, nivel: number){
         this.nombre = nombre;
         this.nivel = nivel;
-        this.imagen = imagen;
     }
 }

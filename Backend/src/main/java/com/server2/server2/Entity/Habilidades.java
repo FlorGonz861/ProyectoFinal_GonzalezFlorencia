@@ -13,15 +13,15 @@ public class Habilidades {
     private int id;
     private String nombre;
     private int nivel;
-    private String imagen;
+    
 
     public Habilidades() {
     }
 
-    public Habilidades(String nombre, int nivel, String imagen) {
+    public Habilidades(String nombre, int nivel) {
         this.nombre = nombre;
         this.nivel = nivel;
-        this.imagen = imagen;
+        
     }
 
     public int getId() {
@@ -48,11 +48,4 @@ public class Habilidades {
         this.nivel = nivel;
     }
 
-    public String getImagen() {
-        return imagen;
-    }
-
-    public void setImagen(String imagen) {
-        this.imagen = imagen;
-    }
 }

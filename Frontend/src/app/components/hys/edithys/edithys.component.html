@@ -1,1 +1,37 @@
-<p>edithys works!</p>
+<div class="p-5">
+  <div class="card w-80 px-5 tarjeta">
+    <div class="row g-0 d-flex align-items-center">
+      <div class="col-lg-4 col- d-none d-lg-flex">
+        <img src="../../../../assets/edicion-guardar.jpg" alt="imagen-login" class="w-100 p-3 rounded-pill"/>
+      </div>
+      <div class="col-lg-8">
+        <div class="card-body py-5 px-md-5">
+
+          <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+
+            <div class="form-outline mb-4">
+              <label for="nombre">Nombre de la habilidad</label>
+              <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="habLab.nombre" required>
+            </div>
+
+            <div class="form-outline mb-4">
+              <label for="nivel">Nivel de habilidad</label>
+              <input type="text" class="form-control" id="nivel" name="nivel" [(ngModel)]="habLab.nivel" required>
+            </div>
+
+            <button type="submit" class="btn btn-light btn-lg btn-block">Guardar</button>
+
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+

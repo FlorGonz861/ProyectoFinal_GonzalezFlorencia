@@ -2,11 +2,6 @@
   background-color: 	#eedfef;
 }
 
-.parte1, .parte2{
-  display: flex;
-  flex-direction: column;
-}
-
 .titulo{
   color: #352a55;
   font-style: solid ;
@@ -22,6 +17,7 @@ img{
   width: 25px;
   padding-bottom: 10px;
 }
+
 img, h2{
   display: inline-block;
 }

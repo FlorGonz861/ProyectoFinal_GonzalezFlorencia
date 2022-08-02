@@ -1,4 +1,28 @@
 .row{
-    background-color: 	#eedfef;
-    padding: 20px;
+  background-color: 	#eedfef;
+}
+
+.titulo{
+  color: #352a55;
+  font-style: solid ;
+}
+
+.agregar{
+  color:#bd83b4;
+  border-color: #bd83b4;
+  border-width: 2px;
+}
+
+.borra{
+  color:#bf4158;
+  border-color: #bf4158;
+  border-width: 2px;
+}
+
+
+
+.edita{
+  color: #6b5b94;
+  border-color: #6b5b94;
+  border-width: 2px;
 }

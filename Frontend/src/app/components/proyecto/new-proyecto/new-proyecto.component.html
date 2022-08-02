@@ -1,27 +1,30 @@
-<div class="container">
-    <div class="row">
-        <div>
+<div class="p-5">
+  <div class="card w-80 px-5 tarjeta">
+    <div class="row g-0 d-flex align-items-center">
+      <div class="col-lg-4 col- d-none d-lg-flex">
+        <img src="../../../../assets/edicion-guardar.jpg" alt="imagen-login" class="w-100 rounded-pill"/>
+      </div>
+      <div class="col-lg-8">
+        <div class="card-body py-5 px-md-5">
             <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
-                <div class="form-group">
-                    <label for="titulo">Titulo del proyecto</label>
+                <div class="form-outline mb-4">
+                    <label for="titulo" class="text-light">Título del proyecto</label>
                     <input type="text" class="form-control" id="titulo" name="titulo" [(ngModel)]="titulo" required>
                 </div>
-                <div class="form-group">
-                    <label for="resumen">Resumen del proyecto</label>
+                <div class="form-outline mb-4">
+                    <label for="resumen" class="text-light">Resumen del proyecto</label>
                     <input type="text" class="form-control" id="resumen" name="resumen" [(ngModel)]="resumen" required>
                 </div>
-                <div class="form-group">
-                    <label for="enlace">Enlace del proyecto</label>
+                <div class="form-outline mb-4">
+                    <label for="enlace" class="text-light">Enlace del proyecto</label>
                     <input type="text" class="form-control" id="enlace" name="enlace" [(ngModel)]="enlace" required>
                 </div>
-                <div class="form-group">
-                    <label for="imagen">Imagen del proyecto</label>
+                <div class="form-outline mb-4">
+                    <label for="imagen" class="text-light">Enlace de la imagen del proyecto</label>
                     <input type="text" class="form-control" id="imagen" name="imagen" [(ngModel)]="imagen" required>
                 </div>
 
-                <button class="btn btn-primary">
-                    Agregar proyecto
-                </button>
+                <button type="submit" class="btn btn-light btn-lg btn-block">Agregar Proyecto</button>
             </form>
         </div>
     </div>

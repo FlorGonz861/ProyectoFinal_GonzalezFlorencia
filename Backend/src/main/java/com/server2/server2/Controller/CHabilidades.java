@@ -59,7 +59,7 @@ public class CHabilidades {
         if(sHabilidades.existsByNombre(dtohab.getNombre()))
             return new ResponseEntity(new Mensaje("Esa experiencia existe"), HttpStatus.BAD_REQUEST);
         
-        Habilidades habilidades = new Habilidades(dtohab.getNombre(), dtohab.getNivel(), dtohab.getImagen());
+        Habilidades habilidades = new Habilidades(dtohab.getNombre(), dtohab.getNivel());
         sHabilidades.save(habilidades);
         
         return new ResponseEntity(new Mensaje("Habilidades agregadas"), HttpStatus.OK);
@@ -67,20 +67,19 @@ public class CHabilidades {
     
     @PutMapping("/update/{id}")
     public ResponseEntity<?> update(@PathVariable("id") int id, @RequestBody dtoHabilidades dtohab){
-        //Validamos si existe el ID
+        
         if(!sHabilidades.existsById(id))
             return new ResponseEntity(new Mensaje("El ID no existe"), HttpStatus.BAD_REQUEST);
-        //Compara nombre de experiencias
+        
         if(sHabilidades.existsByNombre(dtohab.getNombre()) && sHabilidades.getByNombre(dtohab.getNombre()).get().getId() != id)
             return new ResponseEntity(new Mensaje("Esa Habilidad ya existe"), HttpStatus.BAD_REQUEST);
-        //No puede estar vacio
+       
         if(StringUtils.isBlank(dtohab.getNombre()))
             return new ResponseEntity(new Mensaje("El nombre es obligatorio"), HttpStatus.BAD_REQUEST);
         
         Habilidades habilidades = sHabilidades.getOne(id).get();
         habilidades.setNombre(dtohab.getNombre());
         habilidades.setNivel((dtohab.getNivel()));
-        habilidades.setImagen((dtohab.getImagen()));
         
         sHabilidades.save(habilidades);
         return new ResponseEntity(new Mensaje("Habilidades actualizada"), HttpStatus.OK);

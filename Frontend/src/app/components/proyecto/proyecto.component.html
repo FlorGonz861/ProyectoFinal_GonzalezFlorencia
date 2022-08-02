@@ -5,29 +5,22 @@
     <button type="button" class="btn btn-outline-dark fw-bolder mb-2 agregar" routerLink="/nuevaproy" *ngIf="isLogged">Agregar Proyecto</button>
   </div>
 
-  <div class="table-responsive-sm">
-    <table class="table table-borderless">
-      <tbody>
-        <tr *ngFor="let Proyecto of proy">
-          <div class="parte1">
-            <td class="col-xl-6 col-lg-4 col-md-3 col-sm-12"><img src="../../../assets/icon.png"><h2 class="fw-bold">{{Proyecto.titulo}}</h2></td>
-            <td class="col-xl-6 col-lg-4 col-md-4 col-sm-12">{{Proyecto.resumen}}</td>
-          </div>
-          <div>
-            <td class="col-xl-6 col-lg-4 col-md-4 col-sm-12 parte2">
-              <a href={{Proyecto.enlace}}><img [src]="Proyecto.imagen" class="img-fluid img-proyecto w-100"></a>
-            </td>
-          </div>
+  <div *ngFor="let Proyecto of proy" class="d-flex flex-row mt-3">
 
-          <td class="col-xl-2 col-lg-1 col-md-1 col-sm-6" *ngIf="isLogged">
-            <button class="btn btn-outline-dark fw-bolder edita" routerLink="/editproy/{{Proyecto.id}}">Editar<img src="../../../assets/editar.png" class="w-25"/></button>
-          </td>
+    <div class="col-xl-5 col-lg-4 col-md-3 col-sm-12">
+      <img src="../../../assets/icon.png"><h2 class="fw-bold">{{Proyecto.titulo}}</h2>
+      <p>{{Proyecto.resumen}}</p>
+    </div>
 
-          <td class="col-lg-2 col-md-1 col-sm-6" *ngIf="isLogged">
-            <button class="btn btn-outline-dark fw-bolder borra" (click)="delete(Proyecto.id)">Borrar<img src="../../../assets/borrar.png" class="w-25"/></button>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="col-xl-4 col-lg-4 col-md-3 col-sm-12 mx-4">
+        <a href={{Proyecto.enlace}}><img [src]="Proyecto.imagen" class="img-fluid img-proyecto w-100"></a>
+    </div>
+
+    <div class="col-xl-2 col-lg-2 col-md-2 col-sm-6 d-flex align-items-start justify-content-center" *ngIf="isLogged">
+      <button class="btn btn-outline-dark fw-bolder edita mx-2" routerLink="/editproy/{{Proyecto.id}}">Editar<img src="../../../assets/editar.png" class="w-25"/></button>
+
+      <button class="btn btn-outline-dark fw-bolder borra mx-2" (click)="delete(Proyecto.id)">Borrar<img src="../../../assets/borrar.png" class="w-25"/></button>
+    </div>
+
   </div>
 </div>
