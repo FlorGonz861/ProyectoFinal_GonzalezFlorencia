@@ -2,24 +2,24 @@
   <h1 class="titulo fw-bold">Proyectos Realizados</h1>
 
   <div class="col-lg-12 col-md-12 col-sm-12 d-flex justify-content-center">
-    <button type="button" class="btn btn-outline-dark fw-bolder mb-2 agregar" routerLink="/nuevaproy" *ngIf="isLogged">Agregar Proyecto</button>
+    <button type="button" class="btn btn-outline-dark fw-bolder mb-3 shadow agregar" routerLink="/nuevaproy" *ngIf="isLogged">Agregar Proyecto</button>
   </div>
 
-  <div *ngFor="let Proyecto of proy" class="d-flex flex-lg-row flex-md-column mt-3 caja">
+  <div *ngFor="let Proyecto of proy" class="d-flex flex-lg-row flex-md-column my-3 caja">
 
     <div class="col-lg-6 col-md-12 col-sm-12">
-      <img src="../../../assets/icon.png" class="icono"><h2 class="fw-bold">{{Proyecto.titulo}}</h2>
+      <img src="../../../assets/icon.png" class="icono"><h2 class="fw-bolder">{{Proyecto.titulo}}</h2>
       <p>{{Proyecto.resumen}}</p>
     </div>
 
     <div class="col-lg-4 col-md-12 col-sm-11 mx-4 m-md-0 d-flex justify-content-md-center justify-content-sm-center">
-        <a href={{Proyecto.enlace}}><img [src]="Proyecto.imagen" class="img-proyecto w-100"></a>
+        <a href={{Proyecto.enlace}}><img [src]="Proyecto.imagen" class="img-proyecto w-100 shadow"></a>
     </div>
 
     <div class="col-lg-2 col-md-12 col-sm-12 d-flex align-items-start justify-content-center my-2 botones" *ngIf="isLogged">
-      <button class="col-lg-5 col-md-2 col-sm-2 btn btn-outline-dark fw-bolder edita" routerLink="/editproy/{{Proyecto.id}}">Editar<img src="../../../assets/editar.png" class="w-25"/></button>
+      <button class="col-lg-5 col-md-2 col-sm-2 btn btn-outline-dark fw-bolder shadow edita" routerLink="/editproy/{{Proyecto.id}}">Editar<img src="../../../assets/editar.png" class="w-25"/></button>
 
-      <button class="col-lg-5 col-md-2 col-sm-2 btn btn-outline-dark fw-bolder borra ms-2" (click)="delete(Proyecto.id)">Borrar<img src="../../../assets/borrar.png" class="w-25"/></button>
+      <button class="col-lg-5 col-md-2 col-sm-2 btn btn-outline-dark fw-bolder shadow borra ms-2" (click)="delete(Proyecto.id)">Borrar<img src="../../../assets/borrar.png" class="w-25"/></button>
     </div>
 
   </div>

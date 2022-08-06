@@ -1,5 +1,5 @@
 <div class="p-5">
-  <div class="card w-80 px-5 tarjeta">
+  <div class="card w-80 px-5 tarjeta shadow">
     <div class="row g-0 d-flex align-items-center">
       <div class="col-lg-4 col- d-none d-lg-flex">
         <img src="../../../../assets/edicion-guardar.jpg" alt="imagen-login" class="w-100 p-3 rounded-pill"/>
@@ -16,14 +16,19 @@
                     <input type="text" class="form-control" id="apellido" name="apellido" [(ngModel)]="perlab.apellido" required>
                 </div>
                 <div class="form-outline mb-4">
-                    <label for="bio" class="text-light">Bio</label>
+                    <label for="bio" class="text-light">Biografía</label>
                     <input type="text" class="form-control" id="bio" name="bio" [(ngModel)]="perlab.bio" required>
                 </div>
 
                 <div class="form-outline mb-4">
-                    <label for="img" class="text-light">Imagen</label>
+                    <label for="img" class="text-light">Enlace de Imagen de Perfil</label>
                     <input type="text" class="form-control" id="img" name="img" [(ngModel)]="perlab.img" required>
                 </div>
+
+                <div class="form-outline mb-4">
+                  <label for="banner" class="text-light">Enlace de Imagen de Banner</label>
+                  <input type="text" class="form-control" id="banner" name="banner" [(ngModel)]="perlab.banner" required>
+              </div>
 
                 <button type="submit" class="btn btn-light btn-lg btn-block">Guardar</button>
             </form>

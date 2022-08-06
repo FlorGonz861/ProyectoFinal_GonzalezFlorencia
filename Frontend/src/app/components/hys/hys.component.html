@@ -2,7 +2,7 @@
     <h1 class="titulo fw-bold">Hard & Soft skills</h1>
 
     <div class="col-lg-12 col-md-12 col-sm-12 d-flex justify-content-center">
-      <button type="button" class="btn btn-outline-dark fw-bold mb-2 agregar" routerLink="/nuevahab" *ngIf="isLogged">Agregar Hard & Soft skills</button>
+      <button type="button" class="btn btn-outline-dark fw-bold mb-3 shadow agregar" routerLink="/nuevahab" *ngIf="isLogged">Agregar Hard & Soft skills</button>
     </div>
     <div *ngFor="let Habilidades of hab" class="text-center col-sm- col-md-4 col-lg-4 mt-3d-flex flex-column">
       <div >
@@ -25,9 +25,9 @@
       </div>
 
       <div class="col-lg-12 col-md-12 col-sm-12 d-flex justify-content-center mb-4" *ngIf="isLogged">
-        <button class="col-lg-5 col-md-4 col-sm-2 btn btn-outline-dark fw-bolder edita mx-2" routerLink="/edithab/{{Habilidades.id}}">Editar<img src="../../../assets/editar.png" class="w-25"/></button>
+        <button class="col-lg-5 col-md-4 col-sm-2 btn btn-outline-dark fw-bolder shadow edita mx-2" routerLink="/edithab/{{Habilidades.id}}">Editar<img src="../../../assets/editar.png" class="w-25"/></button>
 
-        <button class="col-lg-5 col-md-4 col-sm-2 btn btn-outline-dark fw-bolder borra mx-2" (click)="delete(Habilidades.id)">Borrar<img src="../../../assets/borrar.png" class="w-25"/></button>
+        <button class="col-lg-5 col-md-4 col-sm-2 btn btn-outline-dark fw-bolder shadow borra mx-2" (click)="delete(Habilidades.id)">Borrar<img src="../../../assets/borrar.png" class="w-25"/></button>
       </div>
     </div>
 </div>

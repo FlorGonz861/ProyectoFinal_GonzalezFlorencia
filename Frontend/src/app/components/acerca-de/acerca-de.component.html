@@ -1,9 +1,9 @@
 <div class="row">
-    <div class="col-lg-4 col-md-4 col-sm-12 d-flex flex-column">
+    <div class="col-lg-4 col-md-4 col-sm-12 d-flex flex-column" *ngFor="let Persona of per">
         <div class="col-lg-12 col-md-12 col-sm-12 fotoperfil mb-lg-5 mb-md-5">
-            <img src="../../../assets/FotoPerfil.jpeg" alt="FotoPerfil" class="img-fluid " id="fotodeperfil">
+            <img [src]="Persona.img" alt="FotoPerfil" class="img-fluid " id="fotodeperfil">
         </div>
-        <div class="col-lg-12 col-md-12 col-sm-12 nombre mt-lg-5 mt-md-5" *ngFor="let Persona of per">
+        <div class="col-lg-12 col-md-12 col-sm-12 nombre mt-lg-5 mt-md-5" >
             <h3 id="nombre">{{Persona.nombre}} {{Persona.apellido}}</h3>
             <h5 class="font-monospace">Full Stack Developer Junior</h5>
         </div>
@@ -14,7 +14,7 @@
             <p>{{Persona.bio}}</p>
         </span>
         <div class="col-lg-12 col-md-12 col-sm-12 " *ngIf="isLogged">
-          <button class="btn btn-outline-dark fw-bold edita fs-5 " routerLink="/editace/{{Persona.id}}">Editar<img src="../../../assets/editar.png" class="w-25 px-2"/></button>
+          <button class="btn btn-outline-dark fw-bold edita fs-5 shadow" routerLink="/editace/{{Persona.id}}">Editar<img src="../../../assets/editar.png" class="w-25 px-2"/></button>
         </div>
     </div>
 </div>

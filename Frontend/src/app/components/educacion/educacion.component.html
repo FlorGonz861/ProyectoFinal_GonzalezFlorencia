@@ -1,7 +1,7 @@
 <div class="row">
   <h1 class="titulo fw-bold">Estudios Cursados</h1>
   <div class="col-lg-12 col-md-12 col-sm-12 d-flex justify-content-center">
-    <button type="button" class="btn btn-outline-dark fw-bold mb-2 agregar" routerLink="/nuevaedu" *ngIf="isLogged">Agregar Educación</button>
+    <button type="button" class="btn btn-outline-dark fw-bold mb-3 shadow agregar" routerLink="/nuevaedu" *ngIf="isLogged">Agregar Educación</button>
   </div>
     <div class="table-responsive-sm">
       <table class="table table-borderless">
@@ -16,11 +16,11 @@
             <td class="col-lg-4 col-md-4 col-sm-12">{{Educacion.descripcionEd}}</td>
 
             <td class="col-lg-1 col-md-1 col-sm-12" *ngIf="isLogged">
-              <button class="btn btn-outline-dark fw-bold edita" routerLink="/editedu/{{Educacion.id}}">Editar <img src="../../../assets/editar.png" class="imagen"/></button>
+              <button class="btn btn-outline-dark fw-bold shadow edita" routerLink="/editedu/{{Educacion.id}}">Editar <img src="../../../assets/editar.png" class="imagen"/></button>
             </td>
 
             <td class="col-lg-1 col-md-1 col-sm-12" *ngIf="isLogged">
-              <button class="btn btn-outline-dark fw-bold borra" (click)="delete(Educacion.id)">Borrar <img src="../../../assets/borrar.png" class="imagen"/></button>
+              <button class="btn btn-outline-dark fw-bold shadow borra" (click)="delete(Educacion.id)">Borrar <img src="../../../assets/borrar.png" class="imagen"/></button>
             </td>
 
           </tr>
