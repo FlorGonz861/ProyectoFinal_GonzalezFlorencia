@@ -7,7 +7,7 @@ import { Educacion } from '../model/educacion';
   providedIn: 'root'
 })
 export class SEducacionService {
-  eduURL = 'http://localhost:8080/edulab/';
+  eduURL = 'https://shrouded-waters-72557.herokuapp.com/edulab/';
 
   constructor(private httpClient: HttpClient) { }
 
@@ -17,7 +17,7 @@ export class SEducacionService {
 
   public detail(id: number): Observable<Educacion>{
     return this.httpClient.get<Educacion>(this.eduURL + `detail/${id}`);
-  } 
+  }
 
   public save(experiencia: Educacion): Observable<any>{
     return this.httpClient.post<any>(this.eduURL + 'create', experiencia);

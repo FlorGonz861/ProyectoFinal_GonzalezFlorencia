@@ -7,7 +7,7 @@ import { Habilidades } from '../model/habilidades';
   providedIn: 'root'
 })
 export class SHabilidadesService {
-  habURL = 'http://localhost:8080/hablab/';
+  habURL = 'https://shrouded-waters-72557.herokuapp.com/hablab/';
 
   constructor(private httpClient: HttpClient) { }
 
@@ -17,7 +17,7 @@ export class SHabilidadesService {
 
   public detail(id: number): Observable<Habilidades>{
     return this.httpClient.get<Habilidades>(this.habURL + `detail/${id}`);
-  } 
+  }
 
   public save(habilidades: Habilidades): Observable<any>{
     return this.httpClient.post<any>(this.habURL + 'create', habilidades);

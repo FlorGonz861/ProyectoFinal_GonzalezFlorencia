@@ -7,7 +7,7 @@ import { Proyecto } from '../model/proyecto';
   providedIn: 'root'
 })
 export class SProyectoService {
-  proyURL = 'http://localhost:8080/proylab/';
+  proyURL = 'https://shrouded-waters-72557.herokuapp.com/proylab/';
 
   constructor(private httpClient: HttpClient) { }
 
@@ -17,7 +17,7 @@ export class SProyectoService {
 
   public detail(id: number): Observable<Proyecto>{
     return this.httpClient.get<Proyecto>(this.proyURL + `detail/${id}`);
-  } 
+  }
 
   public save(proyecto: Proyecto): Observable<any>{
     return this.httpClient.post<any>(this.proyURL + 'create', proyecto);

@@ -8,8 +8,8 @@ import { persona } from '../model/persona.model';
 })
 
 export class PersonaService {
-  
-  URL = 'http://localhost:8080/perlab/';
+
+  URL = 'https://shrouded-waters-72557.herokuapp.com/perlab/';
 
   constructor(private httpClient: HttpClient) { }
 
@@ -20,7 +20,7 @@ export class PersonaService {
 
   public detail(id: number): Observable<persona>{
     return this.httpClient.get<persona>(this.URL + `detail/${id}`);
-  } 
+  }
 
   public save(experiencia: persona): Observable<any>{
     return this.httpClient.post<any>(this.URL + 'create', experiencia);
